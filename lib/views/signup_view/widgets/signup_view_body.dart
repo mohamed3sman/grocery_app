@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/components/custom_text_field.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
-import 'package:grocery_app/views/signup_view/signup_view.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class SignupViewBody extends StatelessWidget {
+  const SignupViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +25,7 @@ class LoginViewBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Login',
+                    'Sign Up',
                     style: TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.w700,
@@ -37,12 +36,18 @@ class LoginViewBody extends StatelessWidget {
                   ),
                   const Text(
                     textAlign: TextAlign.center,
-                    "Enter your email and password",
+                    "Enter your credentials to continue",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const CustomTextField(
+                    text: 'Username',
                   ),
                   const SizedBox(
                     height: 10,
@@ -63,23 +68,18 @@ class LoginViewBody extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        'Forgot Password?',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
+                  const Text(
+                    'By continuing you agree to our Terms of Service and privacy policy',
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   const SizedBox(
                     height: 30,
                   ),
                   DefaultButton(
-                    text: 'Login',
+                    text: 'Sign Up',
                     onPressed: () {},
                   ),
                   const SizedBox(
@@ -89,7 +89,7 @@ class LoginViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "Don't have an account? ",
+                        "Already have an account? ",
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.w700,
@@ -97,13 +97,10 @@ class LoginViewBody extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (context) {
-                            return const SignupView();
-                          }));
+                          Navigator.pop(context);
                         },
                         child: const Text(
-                          'Signup',
+                          'Login',
                           style: TextStyle(
                             fontSize: 18,
                             color: primaryColor,
