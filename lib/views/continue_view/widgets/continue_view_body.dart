@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/components/continue_button.dart';
+import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
-import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:grocery_app/views/number_view/number_view.dart';
 
 class ContinueViewBody extends StatelessWidget {
   const ContinueViewBody({super.key});
@@ -32,27 +33,13 @@ class ContinueViewBody extends StatelessWidget {
                 const SizedBox(
                   height: 30,
                 ),
-                IntlPhoneField(
-                  cursorColor: primaryColor,
-                  style: const TextStyle(
-                    fontSize: 18,
-                  ),
-                  dropdownTextStyle: const TextStyle(
-                    fontSize: 18,
-                  ),
-                  keyboardType: TextInputType.phone,
-                  decoration: const InputDecoration(
-                    labelText: 'Phone Number',
-                    labelStyle: TextStyle(
-                      fontSize: 18,
-                    ),
-                    border: OutlineInputBorder(
-                      borderSide: BorderSide(),
-                    ),
-                  ),
-                  initialCountryCode: 'EG',
-                  onChanged: (phone) {
-                    print(phone.completeNumber);
+                DefaultButton(
+                  text: 'Continue with Mobile number',
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return const NumberView();
+                    }));
                   },
                 ),
                 const SizedBox(
