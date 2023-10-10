@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/constants.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
+import 'package:grocery_app/views/location_view/location_view.dart';
 
 class VerificationViewBody extends StatelessWidget {
   const VerificationViewBody({super.key});
@@ -38,10 +39,10 @@ class VerificationViewBody extends StatelessWidget {
             digitsOnly: true,
           ),
           const Spacer(),
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 'Resend Code',
                 style: TextStyle(
                   fontSize: 18,
@@ -49,12 +50,19 @@ class VerificationViewBody extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
-              CircleAvatar(
-                backgroundColor: primaryColor,
-                radius: 30,
-                child: Icon(
-                  Icons.arrow_forward_ios_rounded,
-                  color: Colors.white,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return const LocationView();
+                  }));
+                },
+                child: const CircleAvatar(
+                  backgroundColor: primaryColor,
+                  radius: 30,
+                  child: Icon(
+                    Icons.arrow_forward_ios_rounded,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ],

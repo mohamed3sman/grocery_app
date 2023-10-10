@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/number_view_body.dart';
+import 'widgets/location_view_body.dart';
 
-class NumberView extends StatelessWidget {
-  const NumberView({super.key});
+class LocationView extends StatelessWidget {
+  const LocationView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class NumberView extends StatelessWidget {
               Icons.arrow_back_ios_new_rounded,
             )),
       ),
-      body: const NumberViewBody(),
+      body: const LocationViewBody(),
     );
   }
 }
