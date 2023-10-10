@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
+import 'package:grocery_app/views/login_view/login_view.dart';
 
 class LocationViewBody extends StatelessWidget {
   const LocationViewBody({super.key});
@@ -46,9 +47,15 @@ class LocationViewBody extends StatelessWidget {
             ),
             DefaultButton(
               text: 'Allow Location',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return const LoginView();
+                }));
+              },
             ),
-            const Spacer(),
+            const SizedBox(
+              height: 40,
+            ),
           ],
         ),
       ),
