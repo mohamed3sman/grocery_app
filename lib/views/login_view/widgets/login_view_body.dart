@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/components/custom_text_field.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
+import 'package:grocery_app/views/home_view/home_view.dart';
 import 'package:grocery_app/views/signup_view/signup_view.dart';
 
 class LoginViewBody extends StatelessWidget {
@@ -80,7 +81,12 @@ class LoginViewBody extends StatelessWidget {
                   ),
                   DefaultButton(
                     text: 'Login',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const HomeView();
+                      }));
+                    },
                   ),
                   const SizedBox(
                     height: 25,
