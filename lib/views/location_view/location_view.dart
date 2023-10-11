@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/location_view_body.dart';
@@ -17,7 +18,10 @@ class LocationView extends StatelessWidget {
               Icons.arrow_back_ios_new_rounded,
             )),
       ),
-      body: const LocationViewBody(),
+      body: ZoomIn(
+          animate: true,
+          duration: const Duration(milliseconds: 1000),
+          child: const LocationViewBody()),
     );
   }
 }

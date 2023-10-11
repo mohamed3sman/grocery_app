@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/verification_view_body.dart';
@@ -17,7 +18,11 @@ class VerificationView extends StatelessWidget {
               Icons.arrow_back_ios_new_rounded,
             )),
       ),
-      body: const VerificationViewBody(),
+      body: FadeIn(
+        animate: true,
+        duration: const Duration(milliseconds: 1000),
+        child: const VerificationViewBody(),
+      ),
     );
   }
 }

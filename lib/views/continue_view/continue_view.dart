@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/continue_view_body.dart';
@@ -7,8 +8,11 @@ class ContinueView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: ContinueViewBody(),
+    return Scaffold(
+      body: FadeIn(
+          animate: true,
+          duration: const Duration(milliseconds: 1000),
+          child: const ContinueViewBody()),
     );
   }
 }
