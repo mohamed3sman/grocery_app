@@ -1,6 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/constants.dart';
+import 'package:grocery_app/views/product_details_view/product_details_view.dart';
 import 'package:grocery_app/views/shop_view/widgets/custom_product_widget.dart';
 
 import 'shop_view_search_container.dart';
@@ -91,10 +92,18 @@ class ShopViewBody extends StatelessWidget {
                   ),
                   Expanded(
                       child: FadeInRight(
-                    child: const CustomProductWidget(
-                      productImage: 'assets/images/apple.png',
-                      productName: 'Red Apple',
-                      productPrice: '5,33',
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return const ProductDetailsView();
+                        }));
+                      },
+                      child: const CustomProductWidget(
+                        productImage: 'assets/images/apple.png',
+                        productName: 'Red Apple',
+                        productPrice: '5,33',
+                      ),
                     ),
                   )),
                 ],
