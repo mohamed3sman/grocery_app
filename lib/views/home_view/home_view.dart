@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/constants.dart';
 import 'package:grocery_app/views/account_view/account_view.dart';
 import 'package:grocery_app/views/cart_view/cart_view.dart';
+import 'package:grocery_app/views/explore_view/explore_view.dart';
 import 'package:grocery_app/views/fav_view/fav_view.dart';
 import 'package:grocery_app/views/shop_view/shop_view.dart';
 
@@ -18,6 +19,7 @@ class _HomeViewState extends State<HomeView> {
 
   final pages = [
     const ShopView(),
+    const ExploreView(),
     const CartView(),
     const FavView(),
     const AccountView(),
@@ -82,6 +84,34 @@ class _HomeViewState extends State<HomeView> {
                 },
                 icon: pageIndex == 1
                     ? const Icon(
+                        Icons.manage_search_rounded,
+                        color: primaryColor,
+                        size: 35,
+                      )
+                    : const Icon(
+                        Icons.manage_search_rounded,
+                        color: Colors.black,
+                        size: 35,
+                      ),
+              ),
+              const Text(
+                'Explore',
+                style:
+                    TextStyle(color: Colors.black, fontWeight: FontWeight.w600),
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              IconButton(
+                enableFeedback: false,
+                onPressed: () {
+                  setState(() {
+                    pageIndex = 2;
+                  });
+                },
+                icon: pageIndex == 2
+                    ? const Icon(
                         Icons.shopping_cart,
                         color: primaryColor,
                         size: 35,
@@ -105,10 +135,10 @@ class _HomeViewState extends State<HomeView> {
                 enableFeedback: false,
                 onPressed: () {
                   setState(() {
-                    pageIndex = 2;
+                    pageIndex = 3;
                   });
                 },
-                icon: pageIndex == 2
+                icon: pageIndex == 3
                     ? const Icon(
                         Icons.favorite,
                         color: primaryColor,
@@ -133,10 +163,10 @@ class _HomeViewState extends State<HomeView> {
                 enableFeedback: false,
                 onPressed: () {
                   setState(() {
-                    pageIndex = 3;
+                    pageIndex = 4;
                   });
                 },
-                icon: pageIndex == 3
+                icon: pageIndex == 4
                     ? const Icon(
                         Icons.person_3_rounded,
                         color: primaryColor,
