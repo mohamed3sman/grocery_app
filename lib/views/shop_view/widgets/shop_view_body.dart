@@ -1,8 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery_app/shared/components/custom_product_widget.dart';
 import 'package:grocery_app/shared/constants.dart';
 import 'package:grocery_app/views/product_details_view/product_details_view.dart';
-import 'package:grocery_app/views/shop_view/widgets/custom_product_widget.dart';
 
 import 'shop_view_search_container.dart';
 
@@ -85,6 +85,7 @@ class ShopViewBody extends StatelessWidget {
                       productImage: 'assets/images/banana.png',
                       productName: 'Organic Bananas',
                       productPrice: '4,99',
+                      unit: '1kg',
                     ),
                   )),
                   const SizedBox(
@@ -103,6 +104,7 @@ class ShopViewBody extends StatelessWidget {
                         productImage: 'assets/images/apple.png',
                         productName: 'Red Apple',
                         productPrice: '5,33',
+                        unit: '1kg',
                       ),
                     ),
                   )),
@@ -142,6 +144,7 @@ class ShopViewBody extends StatelessWidget {
                       productImage: 'assets/images/beef.png',
                       productName: 'Beef Bone',
                       productPrice: '11,77',
+                      unit: '1kg',
                     ),
                   )),
                   const SizedBox(
@@ -153,6 +156,7 @@ class ShopViewBody extends StatelessWidget {
                       productImage: 'assets/images/chicken.png',
                       productName: 'Broiler Chicken',
                       productPrice: '9,55',
+                      unit: '1kg',
                     ),
                   )),
                 ],
@@ -168,6 +172,7 @@ class ShopViewBody extends StatelessWidget {
                       productImage: 'assets/images/felfel.png',
                       productName: 'Pepper',
                       productPrice: '3,65',
+                      unit: '1kg',
                     ),
                   )),
                   const SizedBox(
@@ -179,6 +184,7 @@ class ShopViewBody extends StatelessWidget {
                       productImage: 'assets/images/gwafa.png',
                       productName: 'Guava',
                       productPrice: '3,55',
+                      unit: '1kg',
                     ),
                   )),
                 ],

@@ -6,11 +6,13 @@ class CustomProductWidget extends StatelessWidget {
       {super.key,
       required this.productImage,
       required this.productName,
-      required this.productPrice});
+      required this.productPrice,
+      required this.unit});
 
   final String productImage;
   final String productName;
   final String productPrice;
+  final String unit;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +56,7 @@ class CustomProductWidget extends StatelessWidget {
                 height: 5,
               ),
               Text(
-                '1Kg, priceg',
+                '$unit, Price',
                 style: TextStyle(
                   fontSize: 16,
                   color: Colors.grey[600],

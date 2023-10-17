@@ -2,6 +2,7 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_app/views/explore_view/widgets/explore_view_search_container.dart';
 import 'package:grocery_app/views/explore_view/widgets/products_container.dart';
+import 'package:grocery_app/views/product_view/product_view.dart';
 
 class ExploreViewBody extends StatelessWidget {
   const ExploreViewBody({super.key});
@@ -104,11 +105,19 @@ class ExploreViewBody extends StatelessWidget {
               ),
               Expanded(
                 child: FadeInRight(
-                  child: const ProductsContainer(
-                    productIcon: 'assets/icons/baverages-icon.png',
-                    productName: 'Beverages',
-                    containerColor: Color(0xffedf7fc),
-                    containerBorderColor: Color(0xffb7dff5),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const ProductView();
+                      }));
+                    },
+                    child: const ProductsContainer(
+                      productIcon: 'assets/icons/baverages-icon.png',
+                      productName: 'Beverages',
+                      containerColor: Color(0xffedf7fc),
+                      containerBorderColor: Color(0xffb7dff5),
+                    ),
                   ),
                 ),
               ),
