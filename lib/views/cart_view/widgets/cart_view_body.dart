@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:grocery_app/shared/components/custom_cart_product.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
+import 'package:grocery_app/shared/constants.dart';
+import 'package:grocery_app/views/cart_view/widgets/bottom_sheet_custom_container.dart';
+import 'package:grocery_app/views/paid_successfully_view/paid_successfully_view.dart';
 
 class CartViewBody extends StatefulWidget {
   const CartViewBody({super.key});
@@ -112,7 +115,141 @@ class _CartViewBodyState extends State<CartViewBody> {
                   ),
                   DefaultButton(
                     text: 'Go to Chackout',
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return SizedBox(
+                              width: double.infinity,
+                              child: Column(
+                                children: [
+                                  const Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        vertical: 30, horizontal: 25),
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'Checkout',
+                                          style: TextStyle(
+                                            fontSize: 22,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                        ),
+                                        Icon(
+                                          Icons.close,
+                                          size: 30,
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Divider(
+                                    color: Colors.grey,
+                                    endIndent: 0,
+                                    height: 0.5,
+                                    indent: 0,
+                                  ),
+                                  const SizedBox(
+                                    height: 25,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 25),
+                                    child: Column(
+                                      children: [
+                                        const CheckoutBottomSheetContainer(
+                                          title: 'Delivery',
+                                          subTitle: 'Select Method',
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 20),
+                                          child: Divider(
+                                            color: Colors.grey,
+                                            endIndent: 0,
+                                            height: 0.5,
+                                            indent: 0,
+                                          ),
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              'Payment',
+                                              style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.black
+                                                      .withOpacity(0.6)),
+                                            ),
+                                            const Row(
+                                              children: [
+                                                Icon(
+                                                  Icons.payment_rounded,
+                                                  size: 30,
+                                                  color: primaryColor,
+                                                ),
+                                                SizedBox(
+                                                  width: 5,
+                                                ),
+                                                Icon(
+                                                  Icons
+                                                      .arrow_forward_ios_rounded,
+                                                ),
+                                              ],
+                                            ),
+                                          ],
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 20),
+                                          child: Divider(
+                                            color: Colors.grey,
+                                            endIndent: 0,
+                                            height: 0.5,
+                                            indent: 0,
+                                          ),
+                                        ),
+                                        const CheckoutBottomSheetContainer(
+                                          title: 'Promo Code',
+                                          subTitle: 'Pick discount',
+                                        ),
+                                        const Padding(
+                                          padding: EdgeInsets.symmetric(
+                                              vertical: 20),
+                                          child: Divider(
+                                            color: Colors.grey,
+                                            endIndent: 0,
+                                            height: 0.5,
+                                            indent: 0,
+                                          ),
+                                        ),
+                                        const CheckoutBottomSheetContainer(
+                                          title: 'Total Cost',
+                                          subTitle: '\$13.97',
+                                        ),
+                                        const SizedBox(
+                                          height: 40,
+                                        ),
+                                        DefaultButton(
+                                            text: 'Place Order',
+                                            onPressed: () {
+                                              Navigator.push(context,
+                                                  MaterialPageRoute(
+                                                      builder: (context) {
+                                                return const PaidSuccessView();
+                                              }));
+                                            })
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            );
+                          });
+                    },
                   ),
                   const SizedBox(
                     height: 20,
