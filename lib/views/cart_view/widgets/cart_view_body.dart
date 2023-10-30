@@ -321,7 +321,8 @@ Future<dynamic> PaidFailedBottomSheet(BuildContext context) {
               Padding(
                 padding: const EdgeInsets.only(
                     top: 60, bottom: 30, left: 25, right: 25),
-                child: DefaultButton(text: 'Track Order', onPressed: () {}),
+                child:
+                    DefaultButton(text: 'Please Try Again', onPressed: () {}),
               ),
               const Text(
                 'Back to home',
