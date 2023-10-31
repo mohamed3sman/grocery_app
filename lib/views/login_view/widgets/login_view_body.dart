@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/custom_text_field.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
@@ -13,46 +14,46 @@ class LoginViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: EdgeInsets.symmetric(horizontal: 22.w),
           child: Column(
             children: [
-              const SizedBox(
-                height: 100,
+              SizedBox(
+                height: 80.h,
               ),
               Image.asset('assets/images/red-carrot.png'),
-              const SizedBox(
-                height: 100,
+              SizedBox(
+                height: 80.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Login',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
+                  SizedBox(
+                    height: 10.h,
                   ),
-                  const Text(
+                  Text(
                     textAlign: TextAlign.center,
                     "Enter your email and password",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 7.h,
                   ),
                   const CustomTextField(
                     text: 'Email',
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 7.h,
                   ),
                   const CustomTextField(
                     text: 'Password',
@@ -61,23 +62,23 @@ class LoginViewBody extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 15.h,
                   ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         'Forgot Password?',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15.sp,
                           fontWeight: FontWeight.w500,
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 25.h,
                   ),
                   DefaultButton(
                     text: 'Login',
@@ -88,16 +89,16 @@ class LoginViewBody extends StatelessWidget {
                       }));
                     },
                   ),
-                  const SizedBox(
-                    height: 25,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         "Don't have an account? ",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15.5.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -108,16 +109,19 @@ class LoginViewBody extends StatelessWidget {
                             return const SignupView();
                           }));
                         },
-                        child: const Text(
+                        child: Text(
                           'Signup',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 15.5.sp,
                             color: primaryColor,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
                       ),
                     ],
+                  ),
+                  SizedBox(
+                    height: 15.h,
                   ),
                 ],
               ),

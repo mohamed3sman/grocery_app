@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/continue_button.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
@@ -15,23 +16,23 @@ class ContinueViewBody extends StatelessWidget {
         children: [
           Image.asset('assets/images/login-image.png'),
           Padding(
-            padding: const EdgeInsets.only(
-              top: 20,
-              left: 25,
-              right: 25,
+            padding: EdgeInsets.only(
+              top: 15.h,
+              left: 20.w,
+              right: 20.w,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Get your groceries\nwith nectar',
                   style: TextStyle(
-                    fontSize: 22,
+                    fontSize: 19.sp,
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                const SizedBox(
-                  height: 30,
+                SizedBox(
+                  height: 25.h,
                 ),
                 DefaultButton(
                   text: 'Continue with Mobile number',
@@ -42,37 +43,40 @@ class ContinueViewBody extends StatelessWidget {
                     }));
                   },
                 ),
-                const SizedBox(
-                  height: 25,
+                SizedBox(
+                  height: 20.h,
                 ),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
                       'Or connect with social media',
                       style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 13.sp,
                         fontWeight: FontWeight.w600,
-                        color: Color(0xff757575),
+                        color: const Color(0xff757575),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 35,
+                SizedBox(
+                  height: 30.h,
                 ),
                 const ContinueButton(
                   icon: 'assets/icons/google.png',
                   text: 'Continue with Google',
                   color: googleButtonColor,
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 15.h,
                 ),
                 const ContinueButton(
                   icon: 'assets/icons/facebook.png',
                   text: 'Continue with Facebook',
                   color: facebookButtonColor,
+                ),
+                SizedBox(
+                  height: 15.h,
                 ),
               ],
             ),

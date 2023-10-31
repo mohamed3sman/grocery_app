@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/custom_text_field.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/shared/constants.dart';
@@ -11,52 +12,52 @@ class SignupViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25),
+          padding: EdgeInsets.symmetric(horizontal: 22.w),
           child: Column(
             children: [
-              const SizedBox(
-                height: 100,
+              SizedBox(
+                height: 80.h,
               ),
               Image.asset('assets/images/red-carrot.png'),
-              const SizedBox(
-                height: 100,
+              SizedBox(
+                height: 80.h,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Sign Up',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
+                  SizedBox(
+                    height: 10.h,
                   ),
-                  const Text(
+                  Text(
                     textAlign: TextAlign.center,
                     "Enter your credentials to continue",
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 14.sp,
                       fontWeight: FontWeight.w700,
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 7.h,
                   ),
                   const CustomTextField(
                     text: 'Username',
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 7.h,
                   ),
                   const CustomTextField(
                     text: 'Email',
                   ),
-                  const SizedBox(
-                    height: 10,
+                  SizedBox(
+                    height: 7.h,
                   ),
                   const CustomTextField(
                     text: 'Password',
@@ -65,33 +66,33 @@ class SignupViewBody extends StatelessWidget {
                       color: Colors.grey,
                     ),
                   ),
-                  const SizedBox(
-                    height: 20,
+                  SizedBox(
+                    height: 15.h,
                   ),
-                  const Text(
+                  Text(
                     'By continuing you agree to our Terms of Service and privacy policy',
                     style: TextStyle(
-                      fontSize: 15,
+                      fontSize: 13.sp,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
-                  const SizedBox(
-                    height: 30,
+                  SizedBox(
+                    height: 25.h,
                   ),
                   DefaultButton(
                     text: 'Sign Up',
                     onPressed: () {},
                   ),
-                  const SizedBox(
-                    height: 25,
+                  SizedBox(
+                    height: 20.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text(
+                      Text(
                         "Already have an account? ",
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 15.5.sp,
                           fontWeight: FontWeight.w700,
                         ),
                       ),
@@ -99,10 +100,10 @@ class SignupViewBody extends StatelessWidget {
                         onTap: () {
                           Navigator.pop(context);
                         },
-                        child: const Text(
+                        child: Text(
                           'Login',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 15.5.sp,
                             color: primaryColor,
                             fontWeight: FontWeight.w700,
                           ),
@@ -111,6 +112,9 @@ class SignupViewBody extends StatelessWidget {
                     ],
                   ),
                 ],
+              ),
+              SizedBox(
+                height: 15.h,
               ),
             ],
           ),

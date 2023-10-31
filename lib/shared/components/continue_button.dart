@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ContinueButton extends StatelessWidget {
   const ContinueButton(
@@ -16,24 +17,24 @@ class ContinueButton extends StatelessWidget {
         onPressed: () {},
         color: color,
         minWidth: double.infinity,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 35,
+        padding: EdgeInsets.symmetric(
+          horizontal: 35.w,
         ),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
         child: Row(
           children: [
             Image.asset(
               icon,
-              width: 35,
+              width: 35.w,
             ),
-            const SizedBox(
-              width: 20,
+            SizedBox(
+              width: 15.h,
             ),
             Text(
               text,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 15.5.sp,
                 fontWeight: FontWeight.w500,
               ),
             ),

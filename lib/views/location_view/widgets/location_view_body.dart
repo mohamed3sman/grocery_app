@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/default_button.dart';
 import 'package:grocery_app/views/login_view/login_view.dart';
 
@@ -9,7 +10,7 @@ class LocationViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
+        padding: EdgeInsets.symmetric(horizontal: 25.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -17,26 +18,26 @@ class LocationViewBody extends StatelessWidget {
             Image.asset(
               'assets/images/location.png',
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 25.h,
             ),
-            const Text(
+            Text(
               'Allow Your Location',
               style: TextStyle(
-                fontSize: 22,
+                fontSize: 19.sp,
                 fontWeight: FontWeight.w700,
               ),
             ),
-            const SizedBox(
-              height: 15,
+            SizedBox(
+              height: 10.h,
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.8,
-              child: const Text(
+              child: Text(
                 textAlign: TextAlign.center,
                 "Allow your location to stay in tune with what's hapenning in your area",
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14.sp,
                   fontWeight: FontWeight.w700,
                   color: Colors.grey,
                 ),
@@ -53,8 +54,8 @@ class LocationViewBody extends StatelessWidget {
                 }));
               },
             ),
-            const SizedBox(
-              height: 40,
+            SizedBox(
+              height: 30.h,
             ),
           ],
         ),

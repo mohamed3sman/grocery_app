@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/constants.dart';
 import 'package:grocery_app/views/verification_view/verification_view.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
@@ -9,35 +10,35 @@ class NumberViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 25, right: 25, top: 30, bottom: 30),
+      padding: EdgeInsets.only(left: 22.w, right: 22.w, top: 30, bottom: 25.h),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const Text(
+          Text(
             'Enter your mobile number',
             style: TextStyle(
-              fontSize: 22,
+              fontSize: 19.sp,
               fontWeight: FontWeight.w700,
             ),
           ),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 20.h,
           ),
           IntlPhoneField(
             cursorColor: primaryColor,
-            style: const TextStyle(
-              fontSize: 18,
+            style: TextStyle(
+              fontSize: 16.sp,
             ),
-            dropdownTextStyle: const TextStyle(
-              fontSize: 18,
+            dropdownTextStyle: TextStyle(
+              fontSize: 16.sp,
             ),
             keyboardType: TextInputType.phone,
-            decoration: const InputDecoration(
+            decoration: InputDecoration(
               labelText: 'Mobile Number',
               labelStyle: TextStyle(
-                fontSize: 18,
+                fontSize: 16.sp,
               ),
-              border: OutlineInputBorder(
+              border: const OutlineInputBorder(
                 borderSide: BorderSide(),
               ),
             ),
@@ -56,10 +57,10 @@ class NumberViewBody extends StatelessWidget {
                     return const VerificationView();
                   }));
                 },
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   backgroundColor: primaryColor,
-                  radius: 30,
-                  child: Icon(
+                  radius: 28.r,
+                  child: const Icon(
                     Icons.arrow_forward_ios_rounded,
                     color: Colors.white,
                   ),

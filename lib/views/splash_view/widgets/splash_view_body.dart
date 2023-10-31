@@ -25,7 +25,9 @@ class _SplashViewBodyState extends State<SplashViewBody> {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Image.asset('assets/images/logo.png'),
+      child: SizedBox(
+          width: MediaQuery.of(context).size.width * 0.8,
+          child: Image.asset('assets/images/logo.png')),
     );
   }
 }

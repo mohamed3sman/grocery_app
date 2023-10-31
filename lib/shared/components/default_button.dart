@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/constants.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -19,9 +20,9 @@ class DefaultButton extends StatelessWidget {
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
       child: Text(
         text,
-        style: const TextStyle(
+        style: TextStyle(
           color: Colors.white,
-          fontSize: 20,
+          fontSize: 17.5.sp,
           fontWeight: FontWeight.w600,
         ),
       ),
