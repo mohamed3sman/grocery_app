@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/constants.dart';
 
 class CustomProductWidget extends StatelessWidget {
@@ -17,8 +18,8 @@ class CustomProductWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 220,
-      height: 280,
+      width: MediaQuery.of(context).size.width * 0.4,
+      height: 250,
       padding: const EdgeInsets.only(
         top: 30,
         left: 15,
@@ -39,16 +40,16 @@ class CustomProductWidget extends StatelessWidget {
               productImage,
             ),
           ),
-          const SizedBox(
-            height: 30,
+          SizedBox(
+            height: 25.h,
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 productName,
-                style: const TextStyle(
-                  fontSize: 17,
+                style: TextStyle(
+                  fontSize: 15.sp,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -58,7 +59,7 @@ class CustomProductWidget extends StatelessWidget {
               Text(
                 '$unit, Price',
                 style: TextStyle(
-                  fontSize: 16,
+                  fontSize: 14.sp,
                   color: Colors.grey[600],
                   fontWeight: FontWeight.w600,
                 ),
@@ -71,8 +72,8 @@ class CustomProductWidget extends StatelessWidget {
                 children: [
                   Text(
                     '\$$productPrice',
-                    style: const TextStyle(
-                      fontSize: 22,
+                    style: TextStyle(
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -85,9 +86,9 @@ class CustomProductWidget extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       color: primaryColor,
-                      child: const Icon(
+                      child: Icon(
                         Icons.add,
-                        size: 20,
+                        size: 18.r,
                         color: Colors.white,
                       ),
                     ),

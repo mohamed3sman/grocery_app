@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/custom_product_widget.dart';
 import 'package:grocery_app/shared/constants.dart';
 import 'package:grocery_app/views/product_details_view/product_details_view.dart';
@@ -14,60 +15,63 @@ class ShopViewBody extends StatelessWidget {
     return Center(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.only(top: 70, left: 25, right: 25),
+          padding: EdgeInsets.only(top: 45.h, left: 15.w, right: 15.w),
           child: Column(
             children: [
               Image.asset(
                 'assets/images/red-carrot.png',
-                width: 35,
+                width: 30.w,
               ),
-              const SizedBox(
-                height: 15,
+              SizedBox(
+                height: 10.h,
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Icon(
                     Icons.location_on_rounded,
-                    size: 28,
+                    size: 25.r,
                   ),
                   SizedBox(
-                    width: 8,
+                    width: 8.w,
                   ),
                   Text(
                     'Dhaka, Banassre',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 16.sp,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
               ),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 15.h,
               ),
               const ShopViewSearchContainer(),
-              const SizedBox(
-                height: 20,
+              SizedBox(
+                height: 15.h,
               ),
-              Image.asset('assets/images/banner.png'),
-              const SizedBox(
-                height: 30,
+              Image.asset(
+                'assets/images/banner.png',
+                width: double.infinity,
               ),
-              const Row(
+              SizedBox(
+                height: 25.h,
+              ),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Exclusive Offer',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   Text(
                     'See all',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 15.sp,
                       color: primaryColor,
                       fontWeight: FontWeight.w600,
                     ),
@@ -113,20 +117,20 @@ class ShopViewBody extends StatelessWidget {
               const SizedBox(
                 height: 30,
               ),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Best Selling',
                     style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 19.sp,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   Text(
                     'See all',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 15.sp,
                       color: primaryColor,
                       fontWeight: FontWeight.w600,
                     ),
