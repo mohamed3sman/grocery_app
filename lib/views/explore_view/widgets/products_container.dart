@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductsContainer extends StatelessWidget {
   const ProductsContainer(
@@ -16,7 +17,7 @@ class ProductsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 200,
+      height: 170.h,
       padding: const EdgeInsets.symmetric(
         horizontal: 20,
       ),
@@ -31,14 +32,14 @@ class ProductsContainer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(productIcon),
-          const SizedBox(
-            height: 25,
+          SizedBox(
+            height: 20.h,
           ),
           Text(
             textAlign: TextAlign.center,
             productName,
-            style: const TextStyle(
-              fontSize: 16,
+            style: TextStyle(
+              fontSize: 14.sp,
               fontWeight: FontWeight.w700,
             ),
           ),

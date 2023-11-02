@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/views/explore_view/widgets/explore_view_search_container.dart';
 import 'package:grocery_app/views/explore_view/widgets/products_container.dart';
 import 'package:grocery_app/views/product_view/product_view.dart';
@@ -14,19 +15,19 @@ class ExploreViewBody extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 70, left: 25, right: 25),
         child: Column(children: [
-          const Text(
+          Text(
             'Find Products',
             style: TextStyle(
-              fontSize: 18,
+              fontSize: 16.sp,
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 15.h,
           ),
           const ExploreViewSearchContainer(),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 15.h,
           ),
           Row(
             children: [
@@ -40,8 +41,8 @@ class ExploreViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 15,
+              SizedBox(
+                width: 10.w,
               ),
               Expanded(
                 child: FadeInRight(
@@ -55,8 +56,8 @@ class ExploreViewBody extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 10.h,
           ),
           Row(
             children: [
@@ -70,8 +71,8 @@ class ExploreViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 15,
+              SizedBox(
+                width: 10.w,
               ),
               Expanded(
                 child: FadeInRight(
@@ -85,8 +86,8 @@ class ExploreViewBody extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 10.h,
           ),
           Row(
             children: [
@@ -100,8 +101,8 @@ class ExploreViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                width: 15,
+              SizedBox(
+                width: 10.w,
               ),
               Expanded(
                 child: FadeInRight(
@@ -123,8 +124,8 @@ class ExploreViewBody extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 10.h,
           ),
         ]),
       ),

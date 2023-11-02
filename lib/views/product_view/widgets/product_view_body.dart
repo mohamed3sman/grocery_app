@@ -1,5 +1,6 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:grocery_app/shared/components/custom_product_widget.dart';
 
 class ProductViewBody extends StatelessWidget {
@@ -23,21 +24,21 @@ class ProductViewBody extends StatelessWidget {
                     Icons.arrow_back_ios_rounded,
                   ),
                 ),
-                const Text(
+                Text(
                   'Beverages',
                   style: TextStyle(
-                    fontSize: 20,
+                    fontSize: 18.sp,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
-                const Icon(
+                Icon(
                   Icons.filter_alt_outlined,
-                  size: 30,
+                  size: 28.r,
                 )
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 22.h,
             ),
             Row(
               children: [
@@ -50,8 +51,8 @@ class ProductViewBody extends StatelessWidget {
                     unit: '355ml',
                   ),
                 )),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 12.w,
                 ),
                 Expanded(
                     child: FadeInRight(
@@ -64,8 +65,8 @@ class ProductViewBody extends StatelessWidget {
                 )),
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 25.h,
             ),
             Row(
               children: [
@@ -78,8 +79,8 @@ class ProductViewBody extends StatelessWidget {
                     unit: '2L',
                   ),
                 )),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 12.w,
                 ),
                 Expanded(
                     child: FadeInRight(
@@ -92,8 +93,8 @@ class ProductViewBody extends StatelessWidget {
                 )),
               ],
             ),
-            const SizedBox(
-              height: 30,
+            SizedBox(
+              height: 25.h,
             ),
             Row(
               children: [
@@ -106,8 +107,8 @@ class ProductViewBody extends StatelessWidget {
                     unit: '355ml',
                   ),
                 )),
-                const SizedBox(
-                  width: 15,
+                SizedBox(
+                  width: 12.w,
                 ),
                 Expanded(
                     child: FadeInRight(

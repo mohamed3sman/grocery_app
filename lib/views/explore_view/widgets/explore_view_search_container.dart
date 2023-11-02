@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ExploreViewSearchContainer extends StatelessWidget {
   const ExploreViewSearchContainer({super.key});
@@ -6,8 +7,8 @@ class ExploreViewSearchContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 15,
+      padding: EdgeInsets.symmetric(
+        horizontal: 12.w,
         // vertical: 15,
       ),
       width: double.infinity,
@@ -15,18 +16,18 @@ class ExploreViewSearchContainer extends StatelessWidget {
         color: const Color(0xffF2F3F2),
         borderRadius: BorderRadius.circular(15),
       ),
-      child: const Row(
+      child: Row(
         children: [
-          Icon(
+          const Icon(
             Icons.search_rounded,
             size: 28,
           ),
           SizedBox(
-            width: 250,
+            width: MediaQuery.of(context).size.width * 0.5,
             height: 60,
             child: TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(
+                  border: const OutlineInputBorder(
                     borderSide: BorderSide(
                       width: 0,
                       style: BorderStyle.none,
@@ -35,7 +36,7 @@ class ExploreViewSearchContainer extends StatelessWidget {
                   hintText: 'Search Store',
                   hintStyle: TextStyle(
                     color: Colors.black,
-                    fontSize: 16,
+                    fontSize: 14.sp,
                   )),
             ),
           ),
